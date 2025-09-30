@@ -1,0 +1,9 @@
+/build
+/build/**
+/target
+/target/**
+/.idea
+/.idea/**
+/.vscode
+/.vscode/**
+/.DS_Store

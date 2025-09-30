@@ -1,6 +1,7 @@
 package com.mainak;
 
 import com.mainak.faker.FakeAddress;
+import com.mainak.faker.FakeFinance;
 import com.mainak.faker.FakePersonal;
 import com.mainak.faker.JFaker;
 
@@ -32,6 +33,7 @@ public class Main {
         System.out.println("Date of Birth: " + fakePersonal.dateOfBirth());
         */
 
+        /*
         // Test Fake Address data generation
          FakeAddress fakeAddress = faker.address();
         // Fake street address
@@ -50,5 +52,18 @@ public class Main {
         System.out.println("Latitude: " + fakeAddress.latitude());
         // Fake longitude
         System.out.println("Longitude: " + fakeAddress.longitude());
+         */
+
+        FakeFinance fakeFinance = faker.finance();
+        // Fake credit card number
+        System.out.println("Credit Card Number: " + fakeFinance.creditCardNumber());
+        // Fake IBAN number
+        System.out.println("IBAN: " + fakeFinance.iban());
+        // Fake transaction ID
+        System.out.println("Transaction ID: " + fakeFinance.transactionId(16));
+        // Fake currency code
+        System.out.println("Currency Code: " + fakeFinance.currencyCode());
+        // Fake price
+        System.out.println("Price: " + fakeFinance.price(100, 1000));
     }
 }

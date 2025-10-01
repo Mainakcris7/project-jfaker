@@ -65,6 +65,7 @@ public class Main {
         System.out.println("Price: " + fakeFinance.price(100, 1000));
          */
 
+        /*
         FakeInternet fakeInternet = faker.internet();
         // Fake domain name
         System.out.println("Domain Name: " + fakeInternet.domainName());
@@ -76,6 +77,17 @@ public class Main {
         System.out.println("MAC Address: " + fakeInternet.macAddress());
         // Fake URL
         System.out.println("URL: " + fakeInternet.url());
+         */
+
+        FakeJob fakeJob = faker.job();
+        // Fake job title
+        System.out.println("Job Title: " + fakeJob.jobTitle());
+        // Fake company name
+        System.out.println("Company Name: " + fakeJob.companyName());
+        // Fake industry
+        System.out.println("Industry: " + fakeJob.industry());
+        // Fake salary
+        System.out.println("Salary: " + fakeJob.salary(50000, 150000));
 
     }
 }

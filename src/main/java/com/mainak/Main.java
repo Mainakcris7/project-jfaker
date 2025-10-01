@@ -1,9 +1,6 @@
 package com.mainak;
 
-import com.mainak.faker.FakeAddress;
-import com.mainak.faker.FakeFinance;
-import com.mainak.faker.FakePersonal;
-import com.mainak.faker.JFaker;
+import com.mainak.faker.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -54,6 +51,7 @@ public class Main {
         System.out.println("Longitude: " + fakeAddress.longitude());
          */
 
+        /*
         FakeFinance fakeFinance = faker.finance();
         // Fake credit card number
         System.out.println("Credit Card Number: " + fakeFinance.creditCardNumber());
@@ -65,5 +63,19 @@ public class Main {
         System.out.println("Currency Code: " + fakeFinance.currencyCode());
         // Fake price
         System.out.println("Price: " + fakeFinance.price(100, 1000));
+         */
+
+        FakeInternet fakeInternet = faker.internet();
+        // Fake domain name
+        System.out.println("Domain Name: " + fakeInternet.domainName());
+        // Fake IPv4 address
+        System.out.println("IPv4 Address: " + fakeInternet.ipv4Address());
+        // Fake IPv6 address
+        System.out.println("IPv6 Address: " + fakeInternet.ipv6Address());
+        // Fake MAC address
+        System.out.println("MAC Address: " + fakeInternet.macAddress());
+        // Fake URL
+        System.out.println("URL: " + fakeInternet.url());
+
     }
 }

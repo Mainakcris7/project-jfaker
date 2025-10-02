@@ -2,6 +2,8 @@ package com.mainak;
 
 import com.mainak.faker.*;
 
+import java.time.LocalDate;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -91,6 +93,7 @@ public class Main {
         System.out.println("Salary: " + fakeJob.salary(50000, 150000));
          */
 
+        /*
         FakeCommerce fakeCommerce = faker.commerce();
         // Fake product name
         System.out.println("Product Name: " + fakeCommerce.productName());
@@ -102,6 +105,17 @@ public class Main {
         System.out.println("Price: " + fakeCommerce.price(50, 500));
         // Fake discount code
         System.out.println("Discount Code: " + fakeCommerce.discountCode(10));
+        */
+
+        FakeDate fakeDate = faker.date();
+        // Fake date between two dates
+        System.out.println("Date Between: " + fakeDate.between(LocalDate.of(2000, 1, 1), LocalDate.of(2020, 12, 31)));
+        // Fake past date within last n days
+        System.out.println("Past Date: " + fakeDate.past(1000));
+        // Fake future date within next n days
+        System.out.println("Future Date: " + fakeDate.future(1000));
+        // Fake time
+        System.out.println("Time: " + fakeDate.time());
 
     }
 }

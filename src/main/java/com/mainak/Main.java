@@ -107,6 +107,7 @@ public class Main {
         System.out.println("Discount Code: " + fakeCommerce.discountCode(10));
         */
 
+        /*
         FakeDate fakeDate = faker.date();
         // Fake date between two dates
         System.out.println("Date Between: " + fakeDate.between(LocalDate.of(2000, 1, 1), LocalDate.of(2020, 12, 31)));
@@ -116,6 +117,16 @@ public class Main {
         System.out.println("Future Date: " + fakeDate.future(1000));
         // Fake time
         System.out.println("Time: " + fakeDate.time());
+        */
 
+        FakeEducation fakeEducation = faker.education();
+        // Fake university name
+        System.out.println("University Name: " + fakeEducation.universityName());
+        // Fake degree
+        System.out.println("Degree: " + fakeEducation.degree());
+        // Fake course
+        System.out.println("Course: " + fakeEducation.course());
+        // Fake school name
+        System.out.println("School Name: " + fakeEducation.schoolName());
     }
 }

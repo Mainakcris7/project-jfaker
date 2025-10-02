@@ -79,6 +79,7 @@ public class Main {
         System.out.println("URL: " + fakeInternet.url());
          */
 
+        /*
         FakeJob fakeJob = faker.job();
         // Fake job title
         System.out.println("Job Title: " + fakeJob.jobTitle());
@@ -88,6 +89,19 @@ public class Main {
         System.out.println("Industry: " + fakeJob.industry());
         // Fake salary
         System.out.println("Salary: " + fakeJob.salary(50000, 150000));
+         */
+
+        FakeCommerce fakeCommerce = faker.commerce();
+        // Fake product name
+        System.out.println("Product Name: " + fakeCommerce.productName());
+        // Fake product category
+        System.out.println("Product Category: " + fakeCommerce.productCategory());
+        // Fake product brand
+        System.out.println("Product Brand: " + fakeCommerce.productBrand());
+        // Fake price
+        System.out.println("Price: " + fakeCommerce.price(50, 500));
+        // Fake discount code
+        System.out.println("Discount Code: " + fakeCommerce.discountCode(10));
 
     }
 }

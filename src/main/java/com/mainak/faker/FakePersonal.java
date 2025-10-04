@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 public class FakePersonal {
     // Method to generate fake Full Name
-    // Example output: "John Doe"
     public String fullName() {
         String[] firstNames = {"John", "Jane", "Alice", "Bob", "Charlie", "Eve", "Frank", "Grace", "Rohit", "Aisha", "Carlos", "Yuki", "Fatima", "Liam", "Sofia", "Zhang Wei"};
         String[] lastNames = {"Doe", "Mukherjee", "Smith", "Johnson", "Brown", "Davis", "Miller", "Wilson", "Moore", "Patel", "Khan", "Garcia", "Kim", "Hernandez", "Nguyen", "Singh", "Martinez"};
@@ -23,6 +22,8 @@ public class FakePersonal {
         return lastName;
 
     }
+
+    // Function to generate a random username
     public String username(){
         // Example output: "john_doe123"
         String firstName = firstName().toLowerCase();
@@ -31,9 +32,9 @@ public class FakePersonal {
         String username = firstName + "_" + lastName + number;
         return username;
     }
-        // Generate a random password of given length
+
+    // Function to generate a random password of given length
     public String password(int length){
-        // Example output: "P@ssw0rd!"
         String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
         StringBuilder password = new StringBuilder();
         for (int i = 0; i < length; i++) {
@@ -42,15 +43,17 @@ public class FakePersonal {
         }
         return password.toString();
     }
+
+    // Function to generate a random email address
     public String email(){
-        // Example output: "mainak.mukherjee@email.com"
         String[] domains = {"email.com", "mail.com", "inbox.com", "example.com", "test.com"};
         String domain = domains[(int) (Math.random() * domains.length)];
         String email = firstName().toLowerCase() + "." + lastName().toLowerCase() + "@" + domain;
         return email;
     }
+
+    // Function to generate a random phone number with country code
     public String phoneNumber() {
-        // Example output: "+91 9748643001"
         String[] countryCode = {"+1", "+44", "+91", "+81", "+61", "+49", "+33", "+86"};
         String code = countryCode[(int) (Math.random() * countryCode.length)];
         String number = String.valueOf((long) (Math.random() * 1_000_000_0000L));
@@ -59,8 +62,9 @@ public class FakePersonal {
         }
         return code + " " + number;
     }
+
+    // Function to generate a random date of birth
     public LocalDate dateOfBirth() {
-        // Example output: "1990-05-15"
         int year = (int) (Math.random() * 76) + 1950; // Year between 1950 and 2026
         int month = (int) (Math.random() * 12) + 1; // Month between 1 and 12
         int day = (int) (Math.random() * 28) + 1; // Day between 1 and 28 to avoid invalid dates

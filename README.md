@@ -32,7 +32,6 @@ To get started, clone the JFaker repository using:
 ```cmd
 git clone https://github.com/Mainakcris7/project-jfaker.git
 ```
-Replace `<repository-url>` with the actual URL of your JFaker repository.
 
 ## Installation (Local Setup) 🏗️
 

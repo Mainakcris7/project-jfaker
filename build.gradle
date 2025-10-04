@@ -1,9 +1,22 @@
 plugins {
     id("java")
+    id("maven-publish")
 }
 
 group = "com.mainak"
 version = "1.0-SNAPSHOT"
+
+// For publishing the JAR to local Maven repository
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java   // publish the JAR built by 'java' plugin
+        }
+    }
+    repositories {
+        mavenLocal()              // publish to local ~/.m2/repository
+    }
+}
 
 repositories {
     mavenCentral()
